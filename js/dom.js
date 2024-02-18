@@ -5,6 +5,24 @@ let count = 0;
 for (const btn of allSeatBtn) {
   btn.addEventListener('click', function (e) {
     count = count + 1;
-    document.getElementById("seat-count").innerText = count;
+
+    // show the sitname on the screen
+    const sitName = e.target.innerText;
+    const showSitName = document.getElementById('show-sit-name');
+    const li = document.createElement('li');
+
+    const p = document.createElement('p');
+    p.innerText = sitName;
+    li.appendChild(p);
+    showSitName.appendChild(p);
+
+
+
+
+    innerText('seat-count', count)
   })
+}
+
+function innerText(elementId, value) {
+  document.getElementById(elementId).innerText = value;
 }
