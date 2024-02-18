@@ -16,7 +16,13 @@ for (const btn of allSeatBtn) {
     li.appendChild(p);
     showSitName.appendChild(p);
 
+    // total cost shows
+    const price = 550;
+    const totalCost = document.getElementById('total-price').innerText;
 
+    const convertedTotalCost = parseInt(totalCost);
+    document.getElementById('total-price').innerText =
+      convertedTotalCost + parseInt(price)
 
 
     innerText('seat-count', count)
