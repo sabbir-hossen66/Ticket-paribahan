@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Paribahan</title>
+  <!-- daisy ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .button {
+      background-image: rgba(29, 209, 0, 0.10);
+      ;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <!-- nav  -->
+    <nav class="container mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-xl ">
+              <li class=" font-semibold"><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+
+
+            </ul>
+          </div>
+          <a class="btn btn-ghost font-extrabold text-4xl">P-<span class="font-semibold"></span>Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-xl font-semibold">
+            <li class=" font-semibold"><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+
+          </ul>
+        </div>
+        <!-- search bar -->
+        <div class="navbar-end">
+          <div class="button flex inner-flex justify-center bg-[#1DD10066] items-center rounded">
+            <button class="btn   text-[#1DD100]">Bus</button>
+            <button class="btn btn-ghost btn-circle">
+              <!-- <svg xmlns="/images/tabler-icon-bus.svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg> -->
+              <img src="images/bus-icon.png" alt="">
+          </div>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- bnaner -->
+    <div class="container mx-auto rounded h-[70px] hero min-h-screen mt-10"
+      style="background-image: url(images/banner.png);">
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+          <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+            quasi.
+            In deleniti eaque aut repudiandae et a id nisi.</p>
+          <button class="btn btn-primary bg-[#1DD100]">But Tickets</button>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>
