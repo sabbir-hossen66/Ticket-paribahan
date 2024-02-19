@@ -43,12 +43,9 @@ for (const seat of arr) {
   const selectSeat = document.getElementById(seat);
 
   selectSeat.addEventListener('click', function (e) {
-    // const currentSeat = document.getElementById('')
     selectSeat.classList.add('bg-green-400')
   })
 }
-
-
 const allSeatBtn = document.getElementsByClassName('seat-btn');
 
 
@@ -62,7 +59,13 @@ for (const btn of allSeatBtn) {
     const seatLeftParse = parseInt(seatLeftInnerText);
     seatLeft.innerText = seatLeftParse - 1;
 
+    // cupon validation
+    if (seatLeftParse < 38) {
+      const applyBtn = document.getElementById('apply-btn');
+      applyBtn.removeAttribute('disabled');
+    }
     // validation for seat number
+
 
     if (seatLeftParse < 37) {
       alert('you can not select more than 4 seat')
@@ -70,21 +73,6 @@ for (const btn of allSeatBtn) {
     }
 
     // set background color
-
-
-
-
-    // let clicked = false;
-    // const btn = allSeatBtn[i];
-    // btn.addEventListener('click', function () {
-    //   clicked = !clicked;
-    //   if (clicked) {
-    //     btn.style.backgroundColor = '#1DD100';
-    //     btn.style.color = 'white';
-    //   } else {
-    //     btn.style.backgroundColor = '';
-    //     btn.style.color = '';
-    //   }
 
     // show the sitname on the screen
     const sitName = e.target.innerText;
@@ -97,6 +85,7 @@ for (const btn of allSeatBtn) {
     const p2 = document.createElement('p');
     p.innerText = sitName;
     p2.innerText = price;
+    div.classList.add('flex', 'justify-between')
 
     li.appendChild(p);
     div.appendChild(li)
