@@ -1,6 +1,55 @@
-const allSeatBtn = document.getElementsByClassName('seat-btn');
-// console.log(allSeatBtn);
+const arr = ['A1',
+  'A2',
+  'B1',
+  'B2',
+  'C1',
+  'C2',
+  'D1',
+  'D2',
+  'E1',
+  'E2',
+  'F1',
+  'F2',
+  'G1',
+  'G2',
+  'H1',
+  'H2',
+  'I1',
+  'I2',
+  'J1',
+  'J2',
+  'A3',
+  'A4',
+  'B3',
+  'B4',
+  'C3',
+  'C4',
+  'D3',
+  'D4',
+  'E3',
+  'E4',
+  'F3',
+  'F4',
+  'G3',
+  'G4',
+  'H3',
+  'H4',
+  'I3',
+  'I4',
+  'J3',
+  'J4',
+];
+for (const seat of arr) {
+  const selectSeat = document.getElementById(seat);
 
+  selectSeat.addEventListener('click', function (e) {
+    // const currentSeat = document.getElementById('')
+    selectSeat.classList.add('bg-green-400')
+  })
+}
+
+
+const allSeatBtn = document.getElementsByClassName('seat-btn');
 
 
 let count = 0;
@@ -13,12 +62,35 @@ for (const btn of allSeatBtn) {
     const seatLeftParse = parseInt(seatLeftInnerText);
     seatLeft.innerText = seatLeftParse - 1;
 
+    // validation for seat number
 
+    if (seatLeftParse < 37) {
+      alert('you can not select more than 4 seat')
+      return;
+    }
+
+    // set background color
+
+
+
+
+    // let clicked = false;
+    // const btn = allSeatBtn[i];
+    // btn.addEventListener('click', function () {
+    //   clicked = !clicked;
+    //   if (clicked) {
+    //     btn.style.backgroundColor = '#1DD100';
+    //     btn.style.color = 'white';
+    //   } else {
+    //     btn.style.backgroundColor = '';
+    //     btn.style.color = '';
+    //   }
 
     // show the sitname on the screen
     const sitName = e.target.innerText;
     const price = 550;
     const showSitName = document.getElementById('show-sit-name');
+    const div = document.createElement('div');
     const li = document.createElement('li');
 
     const p = document.createElement('p');
@@ -27,30 +99,18 @@ for (const btn of allSeatBtn) {
     p2.innerText = price;
 
     li.appendChild(p);
+    div.appendChild(li)
     showSitName.appendChild(p);
     showSitName.appendChild(p2);
-
-    // total cost shows
-    // const totalCost = document.getElementById('total-price').innerText;
-
-    // const convertedTotalCost = parseInt(totalCost)
-    // const sum = convertedTotalCost + parseInt(price)
-
-
-    // GRAND TOTAL
-    // const grandTotal = document.getElementById('grand-total').innerText;
-    // const convertedGrandTotal = parseInt(grandTotal);
-    // const sumOfGrand = convertedGrandTotal + parseInt(price);
-    // console.log(sumOfGrand);
-
-    //-------------------------------->------------------------------------->
-    // innerText('grand-total', sumOfGrand)
-    // innerText('total-price', sum)
 
     totalCost('total-price', parseInt(price))
     grandTotal('grand-total', parseInt(price))
 
     innerText('seat-count', count)
+
+
+
+
   })
 }
 

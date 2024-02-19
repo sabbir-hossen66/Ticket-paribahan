@@ -352,21 +352,21 @@
               <div class="bg-[#F7F8F8] rounded-lg p-4 mt-5">
 
                 <div class="flex justify-between font-semibold border-b-2 border-dashed border-[#1DD100] p-2">
-                  <p><span>seat</span> <span id="seat-count" class="bg-[#1DD100] rounded-lg">0</span></p>
+                  <p><span>seat</span> <span id="seat-count" class="bg-[#1DD100] p-3 rounded-lg">0</span></p>
                   <p>Class</p>
                   <p>Price</p>
                 </div>
 
                 <div class="flex justify-between p-2 ">
-                  <p><span id="show-sit-name">C2</span></p>
-                  <p>Economoy</p>
-                  <p>550</p>
+                  <p><span class="flex justify-between" id="show-sit-name"></span></p>
+
+
                 </div>
 
                 <div class="flex justify-between border-b p-2">
-                  <p><span>C2</span></p>
-                  <p>Economoy</p>
-                  <p>550</p>
+
+
+
                 </div>
 
                 <div class="flex justify-between font-semibold p-2">
@@ -426,7 +426,8 @@
                 </div>
 
                 <div>
-                  <input class=" btn w-full bg-[#1DD100] text-[white] mt-5" type="button" value="Next">
+                  <input onclick="my_modal_4.showModal()" class=" btn w-full bg-[#1DD100] text-[white] mt-5"
+                    type="button" value="Next">
                   <div class="label">
                     <span class="label-text-alt text-[#03071299] border-b-2 border-[#03071299]">Terms and
                       Conditions</span>
@@ -449,6 +450,22 @@
     </div>
 
   </section>
+  <!-- modal -->
+  <!-- You can open the modal using ID.showModal() method -->
+
+  <dialog id="my_modal_4" class="modal">
+    <div class="modal-box w-11/12 max-w-5xl">
+      <h3 class="font-bold text-lg">Success</h3>
+      <p class="py-4">Click the button below to close</p>
+      <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button, it will close the modal -->
+          <button class="btn">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
   <footer class="bg-black dark:bg-gray-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
       <div class="md:flex md:justify-between">
