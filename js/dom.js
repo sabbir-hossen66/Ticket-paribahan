@@ -118,6 +118,13 @@ function grandTotal(elementId, value) {
   innerText('grand-total', sumOfGrand)
 }
 
+// scroll in body
+function handleTickets() {
+
+  const buyTickets = document.getElementById('ticket-counter-section');
+  buyTickets.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+}
+
 
 function innerText(elementId, value) {
   document.getElementById(elementId).innerText = value;
